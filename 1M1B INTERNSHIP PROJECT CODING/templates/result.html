@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Result</title>
+</head>
+<body>
+
+<h2>Prediction Result</h2>
+
+<img src="{{ url_for('static', filename='crop.jpg') }}" width="400">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container">
+<h1>🌾 Recommended Crop</h1>
+<h2>{{ crop }}</h2>
+<hr>
+<h3>Input Details</h3>
+<p>Nitrogen : {{ nitrogen }}</p>
+<p>Phosphorus : {{ phosphorus }}</p>
+<p>Potassium : {{ potassium }}</p>
+<p>pH Value : {{ ph }}</p>
+<hr>
+
+<body style ="background-color:#00FF00;">
+
+<h2>Prediction Result</h2>
+
+<p><b>Recommended Crop:</b> {{ crop }}</p>
+<p><b>Soil Type:</b> {{ soil }}</p>
+<p><b>Irrigation Method:</b> {{ irrigation }}</p>
+<p><b>Recommended Fertilizer:</b> {{ fertilizer }}</p>
+
+<h3>Organic Farming Suggestions</h3>
+<pre>{{ organic }}</pre>
+
+<h3>Input Values</h3>
+<ul>
+    <li>Nitrogen: {{ nitrogen }}</li>
+    <li>Phosphorus: {{ phosphorus }}</li>
+    <li>Potassium: {{ potassium }}</li>
+    <li>pH: {{ ph }}</li>
+</ul>
+
+<h3>Sustainability Recommendation</h3>
+<p>
+Use organic fertilizers and maintain proper irrigation
+to improve soil health and crop productivity.
+</p>
+<a href="/">GoTo login page</a>  |
+<a href="/home">Predict Again</a>  |
+<a href="/home">Back</a>
+
+</div>
+</body>
+</html>
